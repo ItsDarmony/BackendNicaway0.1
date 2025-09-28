@@ -1,0 +1,91 @@
+body {
+    font-family: "Satoshi";
+    background: #f4f0e2;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Imagenes/Mombacho1.jpg") no-repeat center center/cover;
+}
+
+.register-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.redirect-message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.redirect-message a {
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redirect-message a:hover {
+    text-decoration: underline;
+}
+
+.mensaje {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#msg {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}

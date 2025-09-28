@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.filtro-municipio {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filtro-municipio label {
+    font-size: 14px;
+    color: #333;
+}
+
+.filtro-municipio select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.hoteles-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hoteles-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hotel-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.hotel-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-img {
+    height: 180px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.hotel-info {
+    padding: 15px;
+}
+
+.hotel-info h3 {
+    margin: 0 0 10px;
+}
+
+.hotel-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-reservar {
+    padding: 10px;
+    width: 100%;
+    background: #0077ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-reservar:hover {
+    background: #005fcc;
+}

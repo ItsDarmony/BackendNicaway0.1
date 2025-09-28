@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f0e2;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Imagenes/Mombacho1.jpg") no-repeat center center/cover;    
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.login-container h2{
+    font-family: "Satoshi";
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2{
+    color: #f2f0eb;
+    font-family: "Satoshi", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-family: "Satoshi", sans-serif;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #f2f0eb;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    border-color: #0077ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
+}
+
+.btn-login {
+    width: 110.5%;
+    padding: 10px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #005fcc;
+}
+
+.registrado {
+    width: 112%;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #0077ff;
+    text-decoration: none;
+}

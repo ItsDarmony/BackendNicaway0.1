@@ -1,0 +1,165 @@
+*, ::before, ::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Satoshi";
+    background-color: #f4f0e2;
+    color: #000000;
+    padding-top: 70px;
+    margin-right: 150px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #f4f0e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.frontpage{
+    margin-top: 1rem;
+    margin-left: 8rem;
+    font-family: Satoshi;
+}
+
+.logo{
+    width: 100px;
+    margin: 1rem, 1rem;
+    margin-top: 0.3rem;
+}
+
+.botonone{
+    text-decoration-line: none;
+    color: white;
+}
+
+.buttons{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.button_login{
+    background-color: #4d8f47;
+    font-weight: bold;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 80px;
+    font-family:sans-serif; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    background-color: #2e5f4f;
+    width: max-content;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+}
+
+.sidebar:hover .sidebar-element{
+    grid-template-columns: 40px 1fr;
+    
+}
+
+.sidebar-list{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-element{
+    padding: 0.8rem 1.3rem;
+    border-radius: 3px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 0fr;
+    color: #000000;
+    fill: #e1552a;
+    transition: grid-template-columns 0.4s;
+    text-wrap: nowrap;
+}
+
+.sidebar-element:not(:has(.sidebar-icon-logo)):hover{
+    background-color: #b63d18;
+    cursor: pointer;
+    transition: grid-template-columns 0.4s;
+}
+
+.sidebar-element:has(.sidebar-icon-logo){
+    margin-bottom: 1rem;
+}
+
+.sidebar-icon{
+    width: 100px;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.sidebar-icon-logo{
+    max-width: 45px;
+}
+
+.sidebar-text, .sidebar-text-logo{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 2rem;
+}
+
+.sidebar-title{
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-info{
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding-left: 0.5rem;
+    margin-top: 0.3rem;
+    color: #000000;
+}
+
+.sidebar-icon-avatar{
+    width: 40px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.sidebar-hide{
+    overflow: hidden;
+}
+
+
