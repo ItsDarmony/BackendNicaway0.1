@@ -8,57 +8,187 @@
     <title>NicaWay</title>
 </head>
 <body>
-    
-    <div class="hoteles-container">
-    <h2>Reserva de Hoteles</h2>
-
-    
-    <div class="filtro-municipio">
-    <label for="municipio">Selecciona un Departamento de Nicaragua:</label>
-    <select id="municipio" name="municipio">
-        <option value="">--Selecciona un Departamento--</option>
-        <option value="Managua">Managua</option>
-        <option value="Granada">Granada</option>
-        <option value="León">León</option>
-    </select>
-    </div>
-
 
     <div class="hoteles-container">
     <h2>Reserva de Hoteles</h2>
     <div class="hotel-list">
 
+    <!-- HOTEL 1 -->
     <div class="hotel-card">
         <img src="../Imagenes/Holiday Inn.avif" alt="holiday inn hotel foto">
         <div class="hotel-info">
-            <h3> Hotel Holiday Inn</h3>
-            <p>Hotel de 3 estrellas Plaza Holiday Inn Juan Pablo, Ii Ave, Managua</p>
-            <button class="btn-reservar">Reservar</button>
+        <h3>Hotel Holiday Inn</h3>
+        <!-- 🔹 Botón abre modal -->
+        <a href="#modal-holiday" class="btn-reservar">Ver Ahora</a>
         </div>
     </div>
 
-    
+    <!-- Modal Hotel 1 -->
+    <div id="modal-holiday" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <h3>Hotel Holiday Inn</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Ubicado en el centro de Managua, ideal para negocios y turismo.</p>
+            <img src="../Imagenes/Holiday Inn.avif" alt="Crowne Plaza" class="modal-img">
+        </div>
+    </div>
+
+    <!-- HOTEL 2 -->
     <div class="hotel-card">
-        <img src="../Imagenes/Crown Plaza.jpeg" alt="crown plaza hotel foto">
-        <div class="hotel-info">
+            <img src="../Imagenes/Crown Plaza.jpeg" alt="crown plaza hotel foto">
+            <div class="hotel-info">
             <h3>Hotel Crowne Plaza</h3>
-            <p>Disfrute de toda lo atractivo que ofrece la tierra de Lagos y Volcanes, al hospedarse en el Crowne Plaza Managua, con su nuevo moderno diseño para cumplir sus necesidades en la nueva normalidad.</p>
-            <button class="btn-reservar">Reservar</button>
+            <a href="#modal-crowne" class="btn-reservar">Ver Ahora</a>
         </div>
     </div>
 
-    
+    <!-- Modal Hotel 2 -->
+    <div id="modal-crowne" class="modal">
+        <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Hotel Crowne Plaza</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Con vista al lago de Managua, ideal para eventos y conferencias. Ofrece spa, piscina y amplias salas de reuniones.</p>
+        <img src="../Imagenes/Crown Plaza.jpeg" alt="Crowne Plaza" class="modal-img">
+        </div>
+    </div>
+
+    <!-- HOTEL 3 -->
     <div class="hotel-card">
-        <img src="../Imagenes/Double Trouble.avif" alt="doubletree hotel foto">
-        <div class="hotel-info">
-            <h3> Hotel DoubleTree by Hilton</h3>
-            <p>Hotel de 4 estrellas Certificación ecológica del club Terraza, 600mts Sur frente, Managua</p>
-            <button class="btn-reservar">Reservar</button>
+            <img src="../Imagenes/486112445.jpg" alt="doubletree hotel foto">
+            <div class="hotel-info">
+                <h3>Hotel DoubleTree by Hilton</h3>
+                <a href="#modal-hilton" class="btn-reservar">Ver Ahora</a>
+            </div>
+    </div>
+
+    <!-- Modal Hotel 3 -->
+    <div id="modal-hilton" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <h3>Hotel DoubleTree by Hilton</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Ubicado cerca del aeropuerto, con desayuno incluido y servicio shuttle. Perfecto para viajeros frecuentes.</p>
+            <img src="../Imagenes/486112445.jpg" alt="DoubleTree exterior" class="modal-img">
         </div>
     </div>
 
+    <div class="hotel-card">
+        <img src="../Imagenes/hilton-princess-managua.avif" alt="Hilton Princess Managua">
+        <div class="hotel-info">
+            <h3>Hilton Princess Managua</h3>
+            <a href="#modal-hiltonprincess" class="btn-reservar">Ver Ahora</a>
     </div>
+</div>
+
+<div id="modal-hiltonprincess" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Hilton Princess Managua</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Hotel de lujo en el centro de Managua. Popular entre viajeros de negocios y turistas, con piscina, gimnasio y restaurante de categoría.</p>
+        <img src="../Imagenes/hilton-princess-managua.avif" alt="Hilton Princess" class="modal-img">
     </div>
+</div>
+
+<!-- Camino Real -->
+<div class="hotel-card">
+    <img src="../Imagenes/Globales.webp" alt="Hotel Camino Real Managua">
+    <div class="hotel-info">
+        <h3>Hotel Globales Camino Real</h3>
+        <a href="#modal-caminoreal" class="btn-reservar">Ver Ahora</a>
+    </div>
+</div>
+
+<div id="modal-caminoreal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Hotel Globales Camino Real</h3>
+        <p>⭐⭐⭐⭐</p>
+        <p>Ubicado cerca del aeropuerto, ofrece amplios jardines, casino, spa, piscina y restaurante internacional.</p>
+        <img src="../Imagenes/Globales.webp" alt="Camino Real" class="modal-img">
+    </div>
+</div>
+
+<!-- Hyatt Place -->
+<div class="hotel-card">
+    <img src="../Imagenes/Hyatt-Place-Managua.webp" alt="Hyatt Place Managua">
+    <div class="hotel-info">
+        <h3>Hyatt Place Managua</h3>
+        <a href="#modal-hyatt" class="btn-reservar">Ver Ahora</a>
+    </div>
+</div>
+
+<div id="modal-hyatt" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Hyatt Place Managua</h3>
+        <p>⭐⭐⭐⭐</p>
+        <p>Moderno hotel en Galerías Santo Domingo, ideal para compras y negocios. Incluye desayuno, gimnasio y piscina.</p>
+        <img src="../Imagenes/Hyatt-Place-Managua.webp" alt="Hyatt Place" class="modal-img">
+    </div>
+</div>
+
+<!-- InterContinental Metrocentro -->
+<div class="hotel-card">
+    <img src="../Imagenes/Intercontinental.jpg" alt="InterContinental Metrocentro Managua">
+    <div class="hotel-info">
+        <h3>Real InterContinental Metrocentro</h3>
+        <a href="#modal-inter" class="btn-reservar">Ver Ahora</a>
+    </div>
+</div>
+
+<div id="modal-inter" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Real InterContinental Metrocentro Managua</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Hotel elegante frente al centro comercial Metrocentro. Cuenta con restaurantes gourmet, spa, piscina y salones para eventos.</p>
+        <img src="../Imagenes/Intercontinental.jpg" alt="InterContinental" class="modal-img">
+    </div>
+</div>
+
+<!-- Hotel Mozonte -->
+<div class="hotel-card">
+    <img src="../Imagenes/Mozonte.jpg" alt="Hotel Mozonte Managua">
+    <div class="hotel-info">
+        <h3>Hotel Mozonte</h3>
+        <a href="#modal-mozonte" class="btn-reservar">Ver Ahora</a>
+    </div>
+</div>
+
+<div id="modal-mozonte" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Hotel Mozonte</h3>
+        <p>⭐⭐⭐</p>
+        <p>Opción económica con ambiente familiar. Ofrece desayuno incluido, piscina y un ambiente acogedor para los visitantes.</p>
+        <img src="../Imagenes/Mozonte.jpg" alt="Hotel Mozonte" class="modal-img">
+    </div>
+</div>
+
+<!-- Best Western Las Mercedes -->
+<div class="hotel-card">
+    <img src="../Imagenes/Best Western.avif" alt="Best Western Las Mercedes Airport Managua">
+    <div class="hotel-info">
+        <h3>Best Western Las Mercedes Airport</h3>
+        <a href="#modal-lasmercedes" class="btn-reservar">Ver Ahora</a>
+    </div>
+</div>
+
+<div id="modal-lasmercedes" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h3>Best Western Las Mercedes Airport</h3>
+        <p>⭐⭐⭐⭐</p>
+        <p>Justo frente al Aeropuerto Internacional de Managua, perfecto para viajeros frecuentes. Incluye restaurantes, piscina y servicio shuttle.</p>
+        <img src="../Imagenes/Best Western.avif" alt="Las Mercedes" class="modal-img">
+    </div>
+</div>
+
+    </div>
+</div>
 
 </body>
 </html>

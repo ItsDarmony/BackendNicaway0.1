@@ -5,25 +5,6 @@ body {
     padding: 20px;
 }
 
-.filtro-municipio {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.filtro-municipio label {
-    font-size: 14px;
-    color: #333;
-}
-
-.filtro-municipio select {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 .hoteles-container {
     max-width: 1000px;
     margin: auto;
@@ -49,14 +30,10 @@ body {
     flex-direction: column;
 }
 
-.hotel-img {
-    height: 180px;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #666;
+.hotel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .hotel-info {
@@ -74,6 +51,7 @@ body {
 }
 
 .btn-reservar {
+    display: block;
     padding: 10px;
     width: 100%;
     background: #0077ff;
@@ -82,8 +60,119 @@ body {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* 🔹 para los <a> */
 }
 
 .btn-reservar:hover {
     background: #005fcc;
+}
+
+/* =====================
+    ESTILOS DEL MODAL
+   ===================== */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    margin: 10px 0;
+}
+
+.modal-img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+/* Botón cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Botones anterior y siguiente */
+.carousel-item .prev,
+.carousel-item .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+}
+
+.carousel-item .prev { left: 10px; }
+.carousel-item .next { right: 10px; }
+
+/* Mostrar la diapositiva activa */
+#slide1:target,
+#slide2:target,
+#slide3:target {
+    display: block;
+}
+
+.carousel-item:first-child {
+    display: block;
 }
