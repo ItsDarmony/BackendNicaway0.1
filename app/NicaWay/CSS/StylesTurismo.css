@@ -2,10 +2,7 @@ body {
     font-family: Arial, sans-serif;
     font-family: Arial, Helvetica, sans-serif;
      background-color: #f4f0e2;
-opacity: 1;
-background-image:  radial-gradient(#1c2c4c 2px, transparent 2px), radial-gradient(#1c2c4c 2px, #f4f0e2 2px);
-background-size: 80px 80px;
-background-position: 0 0,40px 40px;
+
   ;
 }
 

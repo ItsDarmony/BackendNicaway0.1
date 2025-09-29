@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 body{
     font-family: "Satoshi";
     background-color: #f4f0e2;
@@ -67,7 +66,6 @@ body{
 .menu-toggle { display: none; }
 
 /* Sidebar */
-
 .sidebar{
     position: fixed;
     top: 160px;   /* debajo del header */
@@ -78,10 +76,9 @@ body{
     overflow-x: hidden;
     white-space: nowrap;
     border-radius: 0 10px 10px 0;
-    height: auto;   /* 🔹 ahora solo ocupa lo que necesita */
+    height: auto;
     padding-bottom: 10px;
 }
-
 
 .sidebar ul{
     list-style: none;
@@ -115,32 +112,27 @@ body{
     color: inherit;
 }
 
-
 .sidebar a:hover{
     background: #1f4033; 
     border-radius: 5px;
 }
 
-/* Cuando haces clic (active) */
 .menu-list a:active{
-    color: inherit;  /* 🔹 evita azul al hacer clic */
+    color: inherit;
 }
 
-/* Iconos */
 .sidebar .icon{
     font-size: 20px;
     min-width: 40px;
     text-align: center;
 }
 
-/* Texto oculto cuando está colapsado */
 .sidebar .text{
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease;
 }
 
-/* Contenido principal */
 .content{
     margin-left: 70px;
     padding: 20px;
@@ -169,13 +161,9 @@ body{
     border-radius: 50%;
     transition: background 0.3s;
     user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;;
 }
 
-.toggle-btn:focus {
-    outline: none;
-}
+.toggle-btn:focus { outline: none; }
 
 .sidebar .icon svg {
     width: 24px;
@@ -185,9 +173,7 @@ body{
     margin: auto;
 }
 
-.sidebar ul {
-    padding-top: 10px;
-}
+.sidebar ul { padding-top: 10px; }
 
 .toggle-btn:hover {
     background: rgba(255, 255, 255, 0.15);
@@ -225,29 +211,12 @@ body{
     color: #ddd;
 }
 
+.menu-toggle:checked ~ .sidebar { width: 250px; }
+.menu-toggle:checked ~ .sidebar .text { opacity: 1; visibility: visible; }
+.user-info { opacity: 0; visibility: hidden; transition: opacity 0.2s ease; }
+.menu-toggle:checked ~ .sidebar .user-info { opacity: 1; visibility: visible; }
 
-.menu-toggle:checked ~ .sidebar {
-    width: 250px;
-}
-
-.menu-toggle:checked ~ .sidebar .text {
-    opacity: 1;
-    visibility: visible;
-}
-
-.user-info {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease;
-}
-
-
-.menu-toggle:checked ~ .sidebar .user-info {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ======== DESTINOS (sección central tipo cards) ======== */
+/* ======== DESTINOS ======== */
 .destinos {
     text-align: center;
     padding: 40px 20px;
@@ -261,11 +230,14 @@ body{
 }
 
 .destinos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔹 3 columnas fijas */
+  grid-template-rows: repeat(2, auto);   /* 🔹 2 filas */
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 10px;
+  justify-content: center;
 }
 
 .destino-card {
@@ -321,6 +293,23 @@ body{
     transition: background 0.3s;
 }
 
-.destino-card button:hover {
-    background: #3b6f36;
+.destino-card button:hover { background: #3b6f36; }
+
+.instagram-float {
+  position: fixed;
+  bottom: 20px;   /* separación del borde inferior */
+  right: 20px;    /* separación del borde derecho */
+  z-index: 1000;  /* para que siempre quede arriba */
+}
+
+.instagram-float img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-float img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
