@@ -3,6 +3,8 @@
 Proyecto web para la plataforma NicaWay, orientada al turismo en Nicaragua.
 Incluye sistema de autenticación, visualización de hoteles con modales y tabs, y un calendario de actividades patronales y culturales.
 
+Esto siendo una version temprana de la Final, a la cual se le iran agregando mas funcionalidades con el tiempo.
+
 # Características principales #
 Autenticación:
 Login y registro de usuarios.
