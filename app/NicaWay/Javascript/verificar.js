@@ -16,7 +16,7 @@ document.getElementById("verify-form").addEventListener("submit", async (e) => {
 
     if (res.ok) {
       mensajeEl.textContent = data.message;
-      mensajeEl.style.color = "green";
+      mensajeEl.style.color = "aqua";
 
       // Redirigir al login después de verificar
       setTimeout(() => {
@@ -27,7 +27,7 @@ document.getElementById("verify-form").addEventListener("submit", async (e) => {
       mensajeEl.style.color = "red";
     }
   } catch (err) {
-    console.error("❌ Error:", err);
+    console.error(" Error:", err);
     mensajeEl.textContent = "Error de conexión con servidor";
     mensajeEl.style.color = "red";
   }

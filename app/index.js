@@ -58,6 +58,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "NicaWay", "HTML", "Login.html"));
 });
 
+
+app.get("/Turismo.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "NicaWay", "HTML", "Turismo.html"));
+});
+
 app.get("/register.html", (req, res) => {
   res.sendFile(path.join(__dirname, "NicaWay", "HTML", "register.html"));
 });
@@ -100,7 +105,7 @@ app.post("/api/register", async (req, res) => {
         return res.status(500).json({ error: "Error al registrar usuario" });
       }
 
-      console.log(` Usuario creado: ${correo}, código: ${codigo}`);
+      console.log(`👤 Usuario creado: ${correo}, código: ${codigo}`);
 
       try {
         await transporter.sendMail({
@@ -165,7 +170,7 @@ app.post("/api/verificar", (req, res) => {
         console.error(" Error al actualizar usuario:", err2);
         return res.status(500).json({ error: "Error al activar cuenta" });
       }
-      res.json({ message: "Cuenta verificada con éxito " });
+      res.json({ message: " Cuenta verificada con éxito" });
     });
   });
 });
@@ -182,27 +187,30 @@ app.post("/api/login", async (req, res) => {
     }
 
     if (results.length === 0) {
-      return res.status(401).json({ error: "Credenciales inválidas" });
+      return res.status(401).json({ error: "Correo o contraseña incorrectos" });
     }
 
     const user = results[0];
 
     // Validar verificación
     if (user.verificado === 0) {
-      return res.status(401).json({ error: "Debes verificar tu cuenta antes de iniciar sesión" });
+      return res.status(403).json({ error: "Debes verificar tu cuenta antes de iniciar sesión" });
     }
 
     // Comparar contraseña
     const validPass = await bcrypt.compare(password, user.password);
     if (!validPass) {
-      return res.status(401).json({ error: "Credenciales inválidas" });
+      return res.status(401).json({ error: "Correo o contraseña incorrectos" });
     }
 
-    res.json({ token: "abc123xyz", nombres: user.nombres });
+    res.json({ 
+      token: "abc123xyz", 
+      nombres: user.nombres 
+    });
   });
 });
 
 // 🔹 Iniciar servidor
 app.listen(app.get("port"), () => {
-  console.log("Servidor corriendo en el puerto", app.get("port"));
+  console.log("🚀 Servidor corriendo en el puerto", app.get("port"));
 });

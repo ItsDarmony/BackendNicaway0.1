@@ -1,194 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="../CSS/StylesHotel.css">
-    <link rel="stylesheet" href="../CSS/fonts.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NicaWay</title>
+  <meta charset="UTF-8">
+  <title>Hoteles en Managua</title>
+  <link rel="stylesheet" href="../CSS/StylesHotel.css">
 </head>
 <body>
+  <h2>Hoteles en Managua</h2>
 
-    <div class="hoteles-container">
-    <h2>Reserva de Hoteles</h2>
-    <div class="hotel-list">
-
-    <!-- HOTEL 1 -->
+  <div class="hotel-grid">
+    <!-- Holiday Inn -->
     <div class="hotel-card">
-        <img src="../Imagenes/Holiday Inn.avif" alt="holiday inn hotel foto">
-        <div class="hotel-info">
-        <h3>Hotel Holiday Inn</h3>
-        <!-- 🔹 Botón abre modal -->
-        <a href="#modal-holiday" class="btn-reservar">Ver Ahora</a>
-        </div>
+      <img src="../Imagenes/Holiday Inn.avif" alt="Hotel Holiday Inn">
+      <h3>Holiday Inn Managua</h3>
+      <button onclick="abrirModal('holidayinn')">Ver Ahora</button>
     </div>
 
-    <!-- Modal Hotel 1 -->
-    <div id="modal-holiday" class="modal">
-        <div class="modal-content">
-            <a href="#" class="close">&times;</a>
-            <h3>Hotel Holiday Inn</h3>
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>Ubicado en el centro de Managua, ideal para negocios y turismo.</p>
-            <img src="../Imagenes/Holiday Inn.avif" alt="Crowne Plaza" class="modal-img">
-        </div>
-    </div>
-
-    <!-- HOTEL 2 -->
+    <!-- Hilton Princess -->
     <div class="hotel-card">
-            <img src="../Imagenes/Crown Plaza.jpeg" alt="crown plaza hotel foto">
-            <div class="hotel-info">
-            <h3>Hotel Crowne Plaza</h3>
-            <a href="#modal-crowne" class="btn-reservar">Ver Ahora</a>
-        </div>
+      <img src="../Imagenes/hilton-princess-managua.avif" alt="Hilton Princess Managua">
+      <h3>Hilton Princess Managua</h3>
+      <button onclick="abrirModal('hilton')">Ver Ahora</button>
     </div>
 
-    <!-- Modal Hotel 2 -->
-    <div id="modal-crowne" class="modal">
-        <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Hotel Crowne Plaza</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>Con vista al lago de Managua, ideal para eventos y conferencias. Ofrece spa, piscina y amplias salas de reuniones.</p>
-        <img src="../Imagenes/Crown Plaza.jpeg" alt="Crowne Plaza" class="modal-img">
-        </div>
-    </div>
-
-    <!-- HOTEL 3 -->
+    <!-- Globales Camino Real -->
     <div class="hotel-card">
-            <img src="../Imagenes/486112445.jpg" alt="doubletree hotel foto">
-            <div class="hotel-info">
-                <h3>Hotel DoubleTree by Hilton</h3>
-                <a href="#modal-hilton" class="btn-reservar">Ver Ahora</a>
-            </div>
+      <img src="../Imagenes/Globales.webp" alt="Hotel Globales Camino Real Managua">
+      <h3>Hotel Globales Camino Real</h3>
+      <button onclick="abrirModal('caminoreal')">Ver Ahora</button>
     </div>
 
-    <!-- Modal Hotel 3 -->
-    <div id="modal-hilton" class="modal">
-        <div class="modal-content">
-            <a href="#" class="close">&times;</a>
-            <h3>Hotel DoubleTree by Hilton</h3>
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>Ubicado cerca del aeropuerto, con desayuno incluido y servicio shuttle. Perfecto para viajeros frecuentes.</p>
-            <img src="../Imagenes/486112445.jpg" alt="DoubleTree exterior" class="modal-img">
-        </div>
-    </div>
-
+    <!-- Hyatt Place -->
     <div class="hotel-card">
-        <img src="../Imagenes/hilton-princess-managua.avif" alt="Hilton Princess Managua">
-        <div class="hotel-info">
-            <h3>Hilton Princess Managua</h3>
-            <a href="#modal-hiltonprincess" class="btn-reservar">Ver Ahora</a>
+      <img src="../Imagenes/Hyatt-Place-Managua.webp" alt="Hyatt Place Managua">
+      <h3>Hyatt Place Managua</h3>
+      <button onclick="abrirModal('hyatt')">Ver Ahora</button>
     </div>
-</div>
 
-<div id="modal-hiltonprincess" class="modal">
+    <!-- Real InterContinental -->
+    <div class="hotel-card">
+      <img src="../Imagenes/intercontinental.jpg" alt="Real InterContinental Metrocentro Managua">
+      <h3>Real InterContinental Managua</h3>
+      <button onclick="abrirModal('intercontinental')">Ver Ahora</button>
+    </div>
+
+    <!-- Hotel Mozonte -->
+    <div class="hotel-card">
+      <img src="../Imagenes/mozonte.jpg" alt="Hotel Mozonte">
+      <h3>Hotel Mozonte</h3>
+      <button onclick="abrirModal('mozonte')">Ver Ahora</button>
+    </div>
+
+    <!-- Best Western -->
+    <div class="hotel-card">
+      <img src="../Imagenes/Best Western.avif" alt="Best Western Las Mercedes Airport Managua">
+      <h3>Best Western Las Mercedes</h3>
+      <button onclick="abrirModal('lasmercedes')">Ver Ahora</button>
+    </div>
+
+    <!-- Crowne Plaza -->
+    <div class="hotel-card">
+      <img src="../Imagenes/Crown Plaza.jpeg" alt="Crowne Plaza Managua">
+      <h3>Crowne Plaza Managua</h3>
+      <button onclick="abrirModal('crowne')">Ver Ahora</button>
+    </div>
+
+    <!-- DoubleTree -->
+    <div class="hotel-card">
+      <img src="../Imagenes/Double Trouble.avif" alt="DoubleTree by Hilton Managua">
+      <h3>DoubleTree by Hilton</h3>
+      <button onclick="abrirModal('doubletree')">Ver Ahora</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
     <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Hilton Princess Managua</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>Hotel de lujo en el centro de Managua. Popular entre viajeros de negocios y turistas, con piscina, gimnasio y restaurante de categoría.</p>
-        <img src="../Imagenes/hilton-princess-managua.avif" alt="Hilton Princess" class="modal-img">
-    </div>
-</div>
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h3 id="modal-title"></h3>
 
-<!-- Camino Real -->
-<div class="hotel-card">
-    <img src="../Imagenes/Globales.webp" alt="Hotel Camino Real Managua">
-    <div class="hotel-info">
-        <h3>Hotel Globales Camino Real</h3>
-        <a href="#modal-caminoreal" class="btn-reservar">Ver Ahora</a>
-    </div>
-</div>
+      <!-- Tabs -->
+      <div class="modal-tabs">
+        <button class="tab" onclick="mostrarTab('descripcion')">Descripción</button>
+        <button class="tab" onclick="mostrarTab('servicios')">Servicios</button>
+        <button class="tab" onclick="mostrarTab('contacto')">Contacto</button>
+      </div>
 
-<div id="modal-caminoreal" class="modal">
-    <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Hotel Globales Camino Real</h3>
-        <p>⭐⭐⭐⭐</p>
-        <p>Ubicado cerca del aeropuerto, ofrece amplios jardines, casino, spa, piscina y restaurante internacional.</p>
-        <img src="../Imagenes/Globales.webp" alt="Camino Real" class="modal-img">
+      <!-- Contenido dinámico -->
+      <div id="modal-body"></div>
     </div>
-</div>
+  </div>
 
-<!-- Hyatt Place -->
-<div class="hotel-card">
-    <img src="../Imagenes/Hyatt-Place-Managua.webp" alt="Hyatt Place Managua">
-    <div class="hotel-info">
-        <h3>Hyatt Place Managua</h3>
-        <a href="#modal-hyatt" class="btn-reservar">Ver Ahora</a>
-    </div>
-</div>
-
-<div id="modal-hyatt" class="modal">
-    <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Hyatt Place Managua</h3>
-        <p>⭐⭐⭐⭐</p>
-        <p>Moderno hotel en Galerías Santo Domingo, ideal para compras y negocios. Incluye desayuno, gimnasio y piscina.</p>
-        <img src="../Imagenes/Hyatt-Place-Managua.webp" alt="Hyatt Place" class="modal-img">
-    </div>
-</div>
-
-<!-- InterContinental Metrocentro -->
-<div class="hotel-card">
-    <img src="../Imagenes/Intercontinental.jpg" alt="InterContinental Metrocentro Managua">
-    <div class="hotel-info">
-        <h3>Real InterContinental Metrocentro</h3>
-        <a href="#modal-inter" class="btn-reservar">Ver Ahora</a>
-    </div>
-</div>
-
-<div id="modal-inter" class="modal">
-    <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Real InterContinental Metrocentro Managua</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>Hotel elegante frente al centro comercial Metrocentro. Cuenta con restaurantes gourmet, spa, piscina y salones para eventos.</p>
-        <img src="../Imagenes/Intercontinental.jpg" alt="InterContinental" class="modal-img">
-    </div>
-</div>
-
-<!-- Hotel Mozonte -->
-<div class="hotel-card">
-    <img src="../Imagenes/Mozonte.jpg" alt="Hotel Mozonte Managua">
-    <div class="hotel-info">
-        <h3>Hotel Mozonte</h3>
-        <a href="#modal-mozonte" class="btn-reservar">Ver Ahora</a>
-    </div>
-</div>
-
-<div id="modal-mozonte" class="modal">
-    <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Hotel Mozonte</h3>
-        <p>⭐⭐⭐</p>
-        <p>Opción económica con ambiente familiar. Ofrece desayuno incluido, piscina y un ambiente acogedor para los visitantes.</p>
-        <img src="../Imagenes/Mozonte.jpg" alt="Hotel Mozonte" class="modal-img">
-    </div>
-</div>
-
-<!-- Best Western Las Mercedes -->
-<div class="hotel-card">
-    <img src="../Imagenes/Best Western.avif" alt="Best Western Las Mercedes Airport Managua">
-    <div class="hotel-info">
-        <h3>Best Western Las Mercedes Airport</h3>
-        <a href="#modal-lasmercedes" class="btn-reservar">Ver Ahora</a>
-    </div>
-</div>
-
-<div id="modal-lasmercedes" class="modal">
-    <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h3>Best Western Las Mercedes Airport</h3>
-        <p>⭐⭐⭐⭐</p>
-        <p>Justo frente al Aeropuerto Internacional de Managua, perfecto para viajeros frecuentes. Incluye restaurantes, piscina y servicio shuttle.</p>
-        <img src="../Imagenes/Best Western.avif" alt="Las Mercedes" class="modal-img">
-    </div>
-</div>
-
-    </div>
-</div>
-
+  <script src="../Javascript/hoteles.js"></script>
 </body>
 </html>

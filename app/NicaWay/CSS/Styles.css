@@ -69,11 +69,11 @@ body{
 
 .sidebar{
     position: fixed;
-    top: 70px;   /* debajo del header */
+    top: 160px;   /* debajo del header */
     left: 0;
     background: #2e5f4f;
     width: 70px;   /* colapsada */
-    transition: width 0.3s ease;
+    transition: width 0.2s ease;
     overflow-x: hidden;
     white-space: nowrap;
     border-radius: 0 10px 10px 0;

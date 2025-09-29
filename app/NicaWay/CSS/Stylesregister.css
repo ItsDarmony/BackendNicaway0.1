@@ -1,12 +1,12 @@
 body {
-    font-family: "Satoshi";
+   font-family: Arial, sans-serif;
     background: #f4f0e2;
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Imagenes/Mombacho1.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Imagenes/Mombacho1.png") no-repeat center center/cover;
 }
 
 .register-container {

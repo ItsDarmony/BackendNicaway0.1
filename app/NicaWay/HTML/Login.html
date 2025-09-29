@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <link rel="stylesheet" href="../CSS/Styleslogin.css">
-  <link rel="stylesheet" href="../CSS/fonts.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NicaWay</title>
-  <script src="../Javascript/login.js" defer></script>
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../CSS/Styleslogin.css">
 </head>
 <body>
-  <div class="login-box">
+  <div class="login-container">
     <h2>Iniciar Sesión</h2>
     <form id="login-form">
-      <div class="form-group">
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" placeholder="Ingrese su Correo Electrónico" autocomplete="username" required>
-      </div>
-
-      <div class="form-group">
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña" autocomplete="current-password" required>
-      </div>
-
-      <button type="submit" class="btn-login">Iniciar Sesión</button >
-      <a class="registrado" href="register.html">¿Todavía no estás registrado?</a>
-
-     
-      <p id="mensaje-login" class="mensaje"></p>
-    </form>
+  <div class="form-group">
+    <label for="correo">Correo</label>
+    <input type="email" id="correo" name="correo" placeholder="Ingrese su Correo Electrónico" required>
   </div>
+
+  <div class="form-group">
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña" required>
+  </div>
+
+  <button type="submit" class="btn-login">Iniciar Sesión</button>
+  <p class="redirect-message">
+    ¿Todavía no estás registrado? <a href="register.html">Regístrate aquí</a>
+  </p>
+  <p id="mensaje" class="mensaje"></p>
+</form>
+  </div>
+  <script src="../Javascript/login.js" defer></script>
+
 </body>
 </html>

@@ -29,7 +29,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
       mensajeEl.style.color = "red";
     }
   } catch (err) {
-    console.error("❌ Error:", err);
+    console.error(" Error:", err);
     mensajeEl.textContent = "Error al conectar con el servidor";
     mensajeEl.style.color = "red";
   }

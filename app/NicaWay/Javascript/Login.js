@@ -6,10 +6,10 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     password: e.target.password.value
   };
 
-  const mensaje = document.getElementById("mensaje-login");
+  const mensaje = document.getElementById("mensaje");
 
   try {
-    const res = await fetch("http://localhost:4000/api/login", {
+    const res = await fetch("/api/login", {   // 🔹 RUTA RELATIVA
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -18,25 +18,28 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     const result = await res.json();
 
     if (res.ok) {
-      mensaje.textContent = "✅ Bienvenido de nuevo!";
+      mensaje.textContent = " Bienvenido de nuevo!";
       mensaje.style.color = "green";
 
-      // Guardar token de sesión
       if (result.token) {
         localStorage.setItem("token", result.token);
+        localStorage.setItem("usuario", result.nombres); // opcional: guardar nombre
       }
 
-      // Redirigir tras 1.5 segundos a la página principal
       setTimeout(() => {
-        window.location.href = "/index.html"; 
+        window.location.href = "/index.html";
       }, 1500);
     } else {
-      mensaje.textContent = "❌ Credenciales incorrectas";
+      if (result.error && result.error.includes("verificar")) {
+        mensaje.textContent = " Debes verificar tu cuenta antes de iniciar sesión";
+      } else {
+        mensaje.textContent = " Correo o contraseña incorrectos";
+      }
       mensaje.style.color = "red";
     }
   } catch (err) {
     console.error("Error de conexión:", err);
-    mensaje.textContent = "⚠️ Error de conexión con el servidor";
+    mensaje.textContent = " Error de conexión con el servidor";
     mensaje.style.color = "orange";
   }
 });
