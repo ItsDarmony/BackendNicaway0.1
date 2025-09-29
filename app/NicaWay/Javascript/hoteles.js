@@ -25,7 +25,7 @@ const hoteles = {
       telefono: "+505 2255 5777",
       correo: "reservasmga@hiltonmanagua.com"
     },
-    imagen: "../Imagenes/hilton.jpg"
+    imagen: "../Imagenes/hilton-princess-managua.avif"
   },
 
   caminoreal: {
@@ -39,7 +39,7 @@ const hoteles = {
       telefono: "+505 2255 5888",
       correo: "reservashcr@caminoreal.com.ni"
     },
-    imagen: "../Imagenes/caminoreal.jpg"
+    imagen: "../Imagenes/Globales.webp"
   },
 
   hyatt: {
@@ -53,7 +53,7 @@ const hoteles = {
       telefono: "+505 2276 5200",
       correo: "managua.place@hyatt.com"
     },
-    imagen: "../Imagenes/hyatt.jpg"
+    imagen: "../Imagenes/Hyatt-Place-Managua.webp"
   },
 
   intercontinental: {
@@ -95,7 +95,7 @@ const hoteles = {
       telefono: "+505 2255 9000",
       correo: "reservas@lasmercedes.com.ni"
     },
-    imagen: "../Imagenes/lasmercedes.jpg"
+    imagen: "../Imagenes/Best Western.avif"
   },
 
   crowne: {
@@ -109,7 +109,7 @@ const hoteles = {
       telefono: "+505 2255 9870",
       correo: "managua@ihg.com"
     },
-    imagen: "../Imagenes/crowneplaza.jpg"
+    imagen: "../Imagenes/Crown Plaza.jpeg"
   },
 
   doubletree: {
@@ -123,7 +123,7 @@ const hoteles = {
       telefono: "+505 2280 9810",
       correo: "MGANA_DT_Hotel@hilton.com"
     },
-    imagen: "../Imagenes/doubletree.jpg"
+    imagen: "../Imagenes/Double Trouble.avif"
   }
 };
 
