@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: "Satoshi";
     background-color: #f4f0e2;
@@ -244,4 +245,82 @@ body{
 .menu-toggle:checked ~ .sidebar .user-info {
     opacity: 1;
     visibility: visible;
+}
+
+/* ======== DESTINOS (sección central tipo cards) ======== */
+.destinos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.destinos h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #222;
+    font-weight: bold;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.destino-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.destino-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.destino-card h3 {
+    font-size: 18px;
+    margin: 15px;
+    color: #222;
+}
+
+.destino-card p {
+    font-size: 14px;
+    margin: 0 15px 10px 15px;
+    color: #555;
+}
+
+.destino-card .precio {
+    display: inline-block;
+    margin: 0 15px 15px 15px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.destino-card button {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 15px 15px 15px;
+    padding: 10px;
+    background: #4d8f47;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.destino-card button:hover {
+    background: #3b6f36;
 }
