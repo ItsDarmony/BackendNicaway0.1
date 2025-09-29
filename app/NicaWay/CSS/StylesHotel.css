@@ -170,3 +170,22 @@ h2 {
   border-radius: 6px;
   font-size: 15px;
 }
+
+.instagram-float {
+  position: fixed;
+  bottom: 20px;   /* separación del borde inferior */
+  right: 20px;    /* separación del borde derecho */
+  z-index: 1000;  /* para que siempre quede arriba */
+}
+
+.instagram-float img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-float img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
